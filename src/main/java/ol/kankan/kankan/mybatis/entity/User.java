@@ -1,19 +1,29 @@
-package ol.kankan.kankan.dao.smalldto;
+package ol.kankan.kankan.mybatis.entity;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
- * @author kankan
- * @version 1.0
- * @created 2021-02-26 22:47 by kankan
- * @updated 2021-02-26 22:47 by kankan
+ * 实现序列化接口
  */
-public class SmallUser {
+
+public class User implements Serializable {
+
     private Integer id;
     private String username;
     private String address;
     private String sex;
     private Date birthday;
+    private List<Account> accounts;
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
 
     public Integer getId() {
         return id;
@@ -53,5 +63,17 @@ public class SmallUser {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", address='" + address + '\'' +
+                ", sex='" + sex + '\'' +
+                ", birthday=" + birthday +
+                ", accounts=" + accounts +
+                '}';
     }
 }

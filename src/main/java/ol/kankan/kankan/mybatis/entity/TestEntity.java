@@ -1,4 +1,6 @@
-package ol.kankan.kankan.entity;
+package ol.kankan.kankan.mybatis.entity;
+
+import java.io.Serializable;
 
 /**
  * @author kankan
@@ -6,7 +8,7 @@ package ol.kankan.kankan.entity;
  * @created 2021-02-26 14:21 by kankan
  * @updated 2021-02-26 14:21 by kankan
  */
-public class TestEntity {
+public class TestEntity implements Serializable {
 
     private Integer id ;
 

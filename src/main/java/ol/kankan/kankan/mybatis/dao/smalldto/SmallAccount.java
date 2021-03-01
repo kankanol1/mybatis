@@ -1,4 +1,4 @@
-package ol.kankan.kankan.dao.smalldto;
+package ol.kankan.kankan.mybatis.dao.smalldto;
 
 /**
  * @author kankan
@@ -8,6 +8,7 @@ package ol.kankan.kankan.dao.smalldto;
  */
 public class SmallAccount {
     private Integer id;
+    private Integer uid;
     private Double money;
 
     public Integer getId() {
@@ -16,6 +17,14 @@ public class SmallAccount {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getUid() {
+        return uid;
+    }
+
+    public void setUid(Integer uid) {
+        this.uid = uid;
     }
 
     public Double getMoney() {

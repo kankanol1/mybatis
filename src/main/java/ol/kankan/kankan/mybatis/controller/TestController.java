@@ -1,7 +1,7 @@
-package ol.kankan.kankan.controller;
+package ol.kankan.kankan.mybatis.controller;
 
-import ol.kankan.kankan.dao.TestDao;
-import ol.kankan.kankan.entity.TestEntity;
+import ol.kankan.kankan.mybatis.dao.TestDao;
+import ol.kankan.kankan.mybatis.entity.TestEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

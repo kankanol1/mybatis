@@ -1,6 +1,6 @@
-package ol.kankan.kankan.dao;
+package ol.kankan.kankan.mybatis.dao;
 
-import ol.kankan.kankan.entity.TestEntity;
+import ol.kankan.kankan.mybatis.entity.TestEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

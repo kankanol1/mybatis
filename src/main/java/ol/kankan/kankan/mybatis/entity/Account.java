@@ -1,5 +1,5 @@
-package ol.kankan.kankan.entity;
-import ol.kankan.kankan.dao.smalldto.SmallUser;
+package ol.kankan.kankan.mybatis.entity;
+import ol.kankan.kankan.mybatis.dao.smalldto.SmallUser;
 
 import java.io.Serializable;
 

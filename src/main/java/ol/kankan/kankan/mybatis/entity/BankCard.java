@@ -1,4 +1,6 @@
-package ol.kankan.kankan.entity;
+package ol.kankan.kankan.mybatis.entity;
+
+import java.io.Serializable;
 
 /**
  * @author kankan
@@ -6,7 +8,7 @@ package ol.kankan.kankan.entity;
  * @created 2021-02-26 15:44 by kankan
  * @updated 2021-02-26 15:44 by kankan
  */
-public class BankCard {
+public class BankCard implements Serializable {
     private Integer id ;
     private String accountNumber ;
     private String accountName ;
