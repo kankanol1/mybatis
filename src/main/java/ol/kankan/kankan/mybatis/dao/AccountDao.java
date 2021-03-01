@@ -70,7 +70,7 @@ public interface AccountDao {
      * @param uid
      * @return
      */
-    @Select("select id,money from account  where uid=#{uid} ")
+    @Select("select * from account  where uid=#{uid} ")
     SmallAccount findSmallByUid(Integer uid);
 
     /**
@@ -79,7 +79,7 @@ public interface AccountDao {
      * @param uid
      * @return
      */
-    @Select("select id,money from account where uid=#{uid} ")
+    @Select("select * from account where uid=#{uid} ")
     List<Account> findByUid(Integer uid);
 
 }

@@ -34,14 +34,14 @@ public class UserController {
     }
 
     @ApiOperation("删除账户")
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public User delete(@PathVariable Integer id) {
         User user = userDao.findById(id);
         userDao.delete(id);
         return user;
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     @ApiOperation("通过ID查找")
     public User findById(@PathVariable Integer id) {
         return userDao.findById(id);

@@ -7,8 +7,8 @@ import ol.kankan.kankan.jpa.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -27,6 +27,31 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public Person findById(long id) {
-        return personRepository.findById(id).get();
+        Optional<Person> optional = personRepository.findById(id);
+        if (optional != null && optional.isPresent()) {
+            return optional.get();
+        }
+        return null;
+    }
+
+    @Override
+    public void create(Person person) {
+        personRepository.save(person);
+    }
+
+    @Override
+    public void update(Person person) {
+        personRepository.save(person);
+    }
+
+    @Override
+    public void delete(Person person) {
+        personRepository.delete(person);
+    }
+
+    @Override
+    public List<Person> findAll() {
+        List<Person> peoples = personRepository.findAll();
+        return peoples;
     }
 }

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/account/")
+@RequestMapping("/api/account")
 @Api(tags = "MYBATIS: 账号管理")
 public class AccountController {
 
@@ -33,32 +33,32 @@ public class AccountController {
     }
 
     @ApiOperation("删除账户")
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public Account delete(@PathVariable Integer id){
         Account account = accountDao.findById(id);
         accountDao.delete(id);
         return account;
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     @ApiOperation("通过账户ID查找")
     public Account findById(@PathVariable Integer id){
         return accountDao.findById(id);
     }
 
-    @RequestMapping(value = "uid/{uid}",method = RequestMethod.GET)
+    @RequestMapping(value = "/uid/{uid}",method = RequestMethod.GET)
     @ApiOperation("通过账户UiD查找")
     public List<Account> findByUid(@PathVariable Integer uid){
         return accountDao.findByUid(uid);
     }
 
-    @RequestMapping(value = "list",method = RequestMethod.GET)
+    @RequestMapping(value = "/list",method = RequestMethod.GET)
     @ApiOperation("查找所有账户详细信息")
     public List<Account>  findAll(){
         return accountDao.findAll();
     }
 
-    @RequestMapping(value = "small/list",method = RequestMethod.GET)
+    @RequestMapping(value = "/small/list",method = RequestMethod.GET)
     @ApiOperation("查找所有账户基本信息")
     public List<SmallAccount>  findSmallAll(){
         return accountDao.findSmallAll();

@@ -1,5 +1,6 @@
 package ol.kankan.kankan.jpa.service.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,4 +17,5 @@ import java.io.Serializable;
 public class SmallPerson  implements Serializable {
     private long id;
     private String name;
+    private String department_id;
 }

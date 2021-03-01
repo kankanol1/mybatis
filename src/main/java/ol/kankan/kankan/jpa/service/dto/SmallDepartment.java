@@ -13,7 +13,8 @@ import java.io.Serializable;
  * @updated 2021-03-01 00:02 by kankan
  */
 @Data
-public class SmallDepartment  implements Serializable {
+public class SmallDepartment implements Serializable {
     private long id;
     private String name;
+    private String person_id;
 }
